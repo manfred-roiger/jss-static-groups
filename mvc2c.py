@@ -29,7 +29,7 @@ import argparse
 import getpass
 
 # Set this flag to True to enable print output of various intermediate results
-_debug = True
+_debug = False
 
 # The connection settings must be provided in a JSON file:
 #   filename: ~//Library/Preferences/com.github.mvc2c.plist

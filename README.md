@@ -1,7 +1,7 @@
 # jss-static-groups
 Python scripts to manipulate JSS static computer groups (add computer, move software to another computer, etc.)
 
-**Setup:**
+## Setup:
 * All scripts use the [requests Python library](http://docs.python-requests.org/en/master/). Please refere to the [Installation](http://docs.python-requests.org/en/master/user/install/) chapter on the Requests homepage.
 * All scripts read JSS connection settings from a JSON file: ~/Library/Preferences/com.github.mvc2c.plist
 
@@ -14,7 +14,7 @@ Python scripts to manipulate JSS static computer groups (add computer, move soft
 
 * All scripts were written and tested with a self hosted JSS with self signed certificate. I can't tell if the scripts will work with a JAMF hosted JSS or a JSS with official certificate when verify and warnings should be enabled.
 
-**mvc2c.py**
+## mvc2c.py
 
 A litte utility to "move" software from one computer to another computer. To prevent weird results or corruption of the JSS database we only use assignments to static computer groups.
 The script fetches all computergroup memberships of the source computer and matches those to static computergroups in JSS. The destination computer is then added to all matching static computergroups.
@@ -32,7 +32,7 @@ The script fetches all computergroup memberships of the source computer and matc
 
  If no arguments are provided the script prompts for source and destination computer.
 
- **c2sg.py**
+ ## c2sg.py
 
  A litte utility to assign a computer to a JSS static computergroup.
 
@@ -52,7 +52,7 @@ If the script is called without arguments the user will be prompted for a
 computer name and (part of) a static group name. You can also display a list of all
 static groups.
 
-**c2sg_bulk.py**
+## c2sg_bulk.py
 
 A litte utility to assign computer(s) to JSS static computergroup(s).
 Provide computer(s) and static group id(s) in a csv file and for each row
